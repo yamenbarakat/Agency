@@ -1,0 +1,535 @@
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;    
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+:root {
+    --main-color: #10cab7;
+    --sub-color: #ebeced;
+    --back-color: #f6f6f6;
+}
+
+.container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header .nav-bar,
+.services .mountain-img,
+.about .vase-img {
+    display: none;
+}
+
+.works,
+.services,
+.portfolio,
+.about,
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container > h2 {
+    font-size: 68px;
+    position: relative;
+    margin-top: 0;
+}
+
+.container > h2::after {
+    content: "";
+    color: #000;
+    font-size: 16px;
+    position: absolute;
+    font-weight: 400;
+    width: 100%;
+    bottom: 8px;
+    right: 0;
+}
+
+
+
+/* header */
+.hd-container {
+    display: flex;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+header .logo img {
+    width: 80px;
+}
+
+header .nav-icon {
+    cursor: pointer;
+}
+
+header nav {
+    position: relative;
+    margin-left: auto;
+}
+
+header .nav-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 22px;
+}
+
+header .nav-bar {
+    position: absolute;
+    background-color: #2c4755;
+    color: #f6f6f6;
+    width: 200px;
+    right: -20px;
+    padding: 22px;
+    top: 60px;
+    z-index: 10;
+}
+
+header .nav-bar::before {
+    content: "";
+    position: absolute;
+    border: 10px solid #2c4755;
+    top: -20px;
+    border-color: transparent transparent #2c4755 transparent;
+    right: 19px;
+}
+
+header .nav-bar a {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+header .nav-bar a:hover {
+    padding-left: 24px;
+    color: var(--main-color);
+}
+
+header .nav-bar .exit-bar {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+header .toggle-bar {
+    display: block;
+}
+
+
+
+/* slider */
+.slider {
+    background-image: url(../images/mountain.jpg);
+    background-size: cover;
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+}
+
+.slider .intro {
+    width: 300px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.slider h1 {
+    color: var(--main-color);
+}
+
+.slider .intro p {
+    line-height: 1.6;
+}
+
+
+
+/* Works */
+.works {
+    text-align: center;
+}
+
+.works .container {
+    display: grid;
+    gap: 42px;
+}
+
+.works .info-container i {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+.works .info p {
+    line-height: 1.6;
+}
+
+
+
+/* services */
+.services {
+    text-align: center;
+}
+
+.services .container > h2 {
+    color: var(--back-color);
+}
+
+.services .container > h2::before {
+    content: "";
+    width: 280px;
+    background-color: var(--sub-color);
+    height: 4px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 140px);
+}
+
+.services .container > h2::after {
+    content: "Don't be busy, be productive";
+    color: #000;
+    font-size: 16px;
+    position: absolute;
+    font-weight: 400;
+    width: 100%;
+    bottom: 8px;
+    right: 0;
+}
+
+.services .skill i {
+    font-size: 34px;
+    color: var(--main-color);
+}
+
+.services .skill p {
+    line-height: 1.6;
+}
+
+
+
+/* Portfolio */
+.portfolio {
+    background-color: var(--back-color);
+}
+
+.portfolio .container > h2 {
+    color: var(--sub-color);
+    text-align: center;
+}
+
+.portfolio .container > h2::after {
+    content: "If you do it right, it will last forever"; 
+}
+
+.portfolio .project {
+    margin-top: 66px;
+}
+
+.portfolio .project .img-container {
+    width: 100%;
+}
+
+.portfolio .project img {
+    width: 100%;
+}
+
+.portfolio .project p {
+    line-height: 1.6;
+}
+
+
+
+/* About */
+.about .container > h2 {
+    color: var(--back-color);
+    text-align: center;
+}
+
+.about .container > h2::after {
+    content: "Less is more work"; 
+}
+
+.about .info p:first-child {
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+
+.about .info hr {
+    border-color: var(--main-color);
+    width: 60%;
+    margin-left: 0;
+}
+
+.about .info p:last-child {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+
+/* Contact */
+.contact {
+    background-color: var(--back-color); 
+}
+
+.contact .container > h2 {
+    color: var(--sub-color);
+    text-align: center;
+}
+
+.contact .container > h2::after {
+    content: "We are born to create";;   
+}
+
+.contact .info > p:first-of-type {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c4755;
+}
+
+.contact .info > p:last-of-type {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.contact .social-media ul {
+    display: flex;
+}
+
+.contact .social-media ul li {
+    margin-right: 16px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #2c4755;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--back-color);
+}
+
+footer span {
+    color: var(--main-color);
+}
+
+
+/* media query */
+
+/* small media */
+@media (min-width: 576px) {
+    .container {
+        width: 400px;
+    }
+}
+
+
+
+/* medium media */
+@media (min-width: 768px) {
+    .container {
+        width: 638px;
+    }
+
+
+    /* works */
+    .works .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .works .info-container:last-of-type {
+        grid-column: 1/3;
+        margin-top: 0;
+    }
+
+
+    /* services */
+    .services .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services .skills .skill {
+        padding: 16px;
+    }
+
+
+    /* portfolio */
+    .portfolio .project {
+        width: 400px;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+
+    .portfolio .project img {
+        width: 400px;
+    }
+
+
+    /* about */
+    .about .info-container {
+        display: flex;
+    }
+
+    .about .vase-img {
+        display: block;
+        width: 30%;
+        position: relative;
+    }
+
+    .about .vase-img::after {
+        content: "";
+        width: 50px;
+        height: 150px;
+        position: absolute;
+        right: -67px;
+        top: -18px;
+        border-bottom: 40px solid var(--main-color);
+        border-left: 40px solid var(--main-color);
+        z-index: -1;
+    }
+
+    .about .vase-img img {
+        width: 100%;
+    }
+
+    .about .info {
+        width: 50%;
+        margin-left: auto;
+    }
+
+    .about .info p {
+        margin-top: 0;
+    }
+
+
+}
+
+
+
+/* larg media */
+@media (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+
+
+    /* works */
+    .works .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .works .info-container:last-of-type {
+        grid-column: auto;
+    }
+
+
+    /* services */
+    .services .skills .skill {
+        padding: 22px;
+    }
+
+
+    /* portfolio */
+    .portfolio .projects {
+        display: flex;
+    }
+
+    .portfolio .project {
+        width: 33%;
+        padding: 16px;
+        margin-top: 0;
+    }
+
+    .portfolio .project .img-container {
+        height: 200px
+    }
+
+    .portfolio .project img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+
+/* X larg media */
+@media (min-width: 1200px) {
+    .container {
+        width: 1100px;
+    }
+
+
+    /* works */
+    .works .info-container {
+        display: flex;
+        text-align: start;
+    }
+
+    .works .info-container i {
+        margin-top: 20px;
+        margin-right: 26px;
+    }
+
+
+
+    /* services */
+    .services .skills {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .services .mountain-img {
+        display: block;
+        padding: 22px;
+        grid-row: 1 / 3;
+        grid-column: 3;
+        position: relative;
+    }
+
+    .services .mountain-img::after {
+        content: "";
+        width: 100px;
+        height: 560px;
+        background-color: #2c4755;
+        position: absolute;
+        right: -20px;
+        top: -23px;
+        z-index: -1;
+    }
+
+    .services .mountain-img img {
+        width: 100%;
+        height: 460px;
+    }
+
+}
